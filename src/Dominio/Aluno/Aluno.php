@@ -2,7 +2,7 @@
 
 namespace Alura\Arquitetura\Dominio\Aluno;
 
-use Alura\Arquitetura\Aluno\Telefone;
+use Alura\Arquitetura\Dominio\Aluno\Telefone;
 use Alura\Arquitetura\Dominio\Cpf;
 use Alura\Arquitetura\Dominio\Email;
 
@@ -30,5 +30,18 @@ class Aluno
     {
         $this->telefones[] = new Telefone($ddd, $numero);
         return $this;
+    }
+
+    public function cpf() : string {
+        return $this->cpf;
+    }
+    public function nome() : string {
+        return $this->nome;
+    }
+    public function email() : string {
+        return $this->email;
+    }
+    public function telefones() :array {
+        return $this->telefones;
     }
 }
